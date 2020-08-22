@@ -95,11 +95,14 @@ In this case how do I merge my old pull request from feature-c origin to master 
 git branch "branch_name" //new branch pointin to the last commit
 1. Scenario:U r in local feature branch, feature-a. Created a new branch, feature-b. Does the new branch points to 
 last commit of local master branch or feature-a?
-
+The new branch points to the last commit of the branch from which you created new branch. So here the new branch
+points to last commit of feature-a
 
 2. Remore repos->master, feature-a. Local branches master, feature-a. Now you are in local feature-a. 
    executing git pull origin master, pulls code from remote master to local feature-a or local master to
    local feature-a?
+A. remote master to local feature-a branch
+
 
 
 
