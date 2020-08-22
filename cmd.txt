@@ -104,6 +104,10 @@ points to last commit of feature-a
 A. remote master to local feature-a branch
 
 
+-------
+Learn git diff, stash, reset, rebase, add upstream/remote
+
+
 
 
 
