@@ -91,6 +91,12 @@ from feature-c origin to master origin. Pull request was not merged instantly.
 Meanwhile on origin master, someone else has pushed their changes. So now master has moved forward.
 In this case how do I merge my old pull request from feature-c origin to master origin?
 
+--------------------------------
+git branch "branch_name" //new branch pointin to the last commit
+Scenario:U r in local feature branch, feature-a. Created a new branch, feature-b. Does the new branch points to 
+last commit of local master branch or feature-a?
+
+
 
 
 
