@@ -1,0 +1,99 @@
+git branch "branch_name" // create branch
+git checkout "switch_branch_name" // switch branch
+git checkout -b "branch_name" // create and switch to new branch
+
+git branch -d "branch_name" //simple delete
+git branch -D "branch_name" //force delete before merge
+git branch -a //list all branches
+
+git add . // add all changed files to staging
+git commit -m "commit msg" // commit staged changes to branch
+
+------
+merging and conflicts-> 
+Threeway merge or recursive merge-> scenario in which working branch took a separate path, had some commits 
+and in mean time master branch had some commits and moved forward.
+
+
+
+assume master branch present with styles.css with data 
+body{
+    color:red;
+}
+
+git checkout -b "feature-a"
+git checkout master
+
+update styles.css with data
+body{
+    color:red;
+    margin:20px
+}
+
+git add .
+git commit -m "margin added"
+
+git checkout feature-a
+update styles.css with data
+body{
+    color:red;
+    padding:20px
+}
+
+To merge feature-a into master, go to master branch
+git checkout master
+git merge feature-a
+// now you will get conflicts in master branch files. Here styles.css. Delete the comments in that file and put which data you want.
+// now resolving conflits is done. Now just commit on master branch is enough as we have already given the message
+
+git commit
+
+--------------------------------------
+
+Fast forward merge-> scenario in which working branch made checkout from master, did mutliple 
+commits and moved forward. But the master branch is still pointing to the same last commit it had and
+didn't move forward. So we can directly merge working branch in to master without any conflicts.
+
+Git checkout master
+Assume we have styles.css in master with data
+body{
+    color:red;
+}
+Git checkout -b "feature-b"
+Update styles.css with data
+body{
+    color:red;
+    margin:20px;
+}
+git add .
+git commit -m "marging added"
+
+Update styles.css with data
+body{
+    color:red;
+    margin:20px;
+    padding:20px;
+}
+git add .
+git commit -m "padding added"
+
+Now to merge feature-b into master, goto master
+git checkout master
+git merge feature-b
+
+
+---------------------
+Github contribution doubt
+
+remote master cloned to local master. local master checkout to branch feature-c. 
+feature-c requirement coded, pushed as remote branch to origin, raised a pulll request 
+from feature-c origin to master origin. Pull request was not merged instantly.
+Meanwhile on origin master, someone else has pushed their changes. So now master has moved forward.
+In this case how do I merge my old pull request from feature-c origin to master origin?
+
+
+
+
+
+
+
