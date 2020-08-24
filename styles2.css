@@ -5,6 +5,7 @@ body {
 }
 
 
+<<<<<<< HEAD
 test3 {
     color: red;
     margin: 20px;
@@ -12,15 +13,31 @@ test3 {
 }
 
 fhadshk {
+=======
+test1 {
+    color: red;
+    padding: 20px;
+>>>>>>> master
     margin: 20px;
 }
 
 test2 {
     color: red;
+<<<<<<< HEAD
     padding: 20px;    
 }
 
 test3 {
     background-attachment: fixed;
     color: red;
+=======
+    padding: 20px;
+    margin: 20px;
+}
+
+test3 {
+    color: red;
+    padding: 20px;
+    margin: 20px;
+>>>>>>> master
 }
